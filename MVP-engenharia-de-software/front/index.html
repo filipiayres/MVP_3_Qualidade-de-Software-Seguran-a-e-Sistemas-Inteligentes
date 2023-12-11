@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>AI Hipertensão System</title>
+    <link rel="icon" href="img/home_logo.jpeg" type="image/png">
+</head>
+
+<body>
+     <!-- Cabeçalho de informações do sistema -->
+    <header>
+        <div class="title">
+            <h2>Bem-Vindo ao AI Hipertensão Arterial System</h2>
+            <br>
+            <p>Este sistema foi desenvolvido para auxiliar no diagnóstico de Hipertensão Arterial.</p>
+            <p>Para isso, basta preencher os campos abaixo com os dados do paciente e clicar em "Diagnosticar".</p>
+        </div>
+        <!-- <div class="banner">
+            <img src="img/home.jpeg">
+        </div> -->
+    </header>
+
+     <!-- Opções para adicionar um novo item -->
+     
+    <section class="newItem">
+        <input type="text" id="newId" placeholder="id">
+        <input type="text" id="newAge" placeholder="age">
+        <input type="text" id="newGender" placeholder="gender">
+        <input type="text" id="newHeight" placeholder="height">
+        <input type="text" id="newWeight" placeholder="weight">
+        <input type="text" id="newAp_hi" placeholder="ap_hi">
+        <input type="text" id="newAp_lo" placeholder="ap_lo">
+        <input type="text" id="newCholesterol" placeholder="cholesterol">
+        <input type="text" id="newGluc" placeholder="gluc">
+        <input type="text" id="newSmoke" placeholder="smoke">
+        <input type="text" id="newAlco" placeholder="alco">
+        <input type="text" id="newActive" placeholder="active">
+        <input type="text" id="newCardio" placeholder="cardio">
+        <span onclick="newItem()" class="addBtn">Diagnosticar</span>
+    </section>
+
+    <!-- Tabela com items existentes -->
+    <section class="items">
+        <table id="myTable">
+            <tr>
+                <th>id</th>
+                <th>age</th>
+                <th>gender</th>
+                <th>height</th>
+                <th>weight</th>
+                <th>ap_hi</th>
+                <th>ap_lo</th>
+                <th>cholesterol</th>
+                <th>gluc</th>
+                <th>smoke</th>
+                <th>alco</th>
+                <th>active</th>
+                <th>cardio</th>
+
+                <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15" height="15"></th>
+                <!-- <th><img src="img/edit.png" width="15" height="15"></th> -->
+            </tr>
+        </table>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
+
+

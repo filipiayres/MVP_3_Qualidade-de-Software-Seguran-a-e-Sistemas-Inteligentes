@@ -1,0 +1,65 @@
+[2023-12-09 18:56:02,770] INFO _log() L224   * Restarting with stat - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:56:13,559] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 18:56:13] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:56:13,651] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 18:56:13] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:56:13,655] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 18:56:13] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:56:13,669] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 18:56:13] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:56:13,944] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 18:56:13] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:56:20,568] ERROR log_exception() L1449 Exception on /apanhado [POST] - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/flask/app.py L1449
+Traceback (most recent call last):
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask_openapi3/scaffold.py", line 191, in wrapper
+    resp = _do_wrapper(
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask_openapi3/do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+  File "/home/filipiayres/Área de Trabalho/MVP-engenharia-de-software/api cardio/app.py", line 85, in predict
+    modelo = Model.carrega_modelo(ml_path)
+TypeError: Model.carrega_modelo() missing 1 required positional argument: 'path'
+[2023-12-09 18:56:20,572] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 18:56:20] "[35m[1mPOST /apanhado HTTP/1.1[0m" 500 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:56:36,803] INFO _log() L224   * Detected change in '/home/filipiayres/Área de Trabalho/MVP-engenharia-de-software/api cardio/app.py', reloading - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:56:36,942] INFO _log() L224   * Restarting with stat - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:56:41,369] WARNING predict() L127  Erro ao adicionar apanhado '1', Não foi possível salvar novo item :/ - call_trace=/home/filipiayres/Área de Trabalho/MVP-engenharia-de-software/api cardio/app.py L127 
+[2023-12-09 18:56:41,375] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 18:56:41] "[31m[1mPOST /apanhado HTTP/1.1[0m" 400 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:59:50,391] INFO _log() L224   * Detected change in '/home/filipiayres/Área de Trabalho/MVP-engenharia-de-software/api cardio/model/apanhado.py', reloading - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:59:50,562] INFO _log() L224   * Restarting with stat - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:01:37,142] INFO _log() L224   * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.15:5000 (Press CTRL+C to quit) - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:01:37,143] INFO _log() L224   * Restarting with stat - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:01:56,537] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 19:01:56] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:01:56,651] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 19:01:56] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:01:56,655] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 19:01:56] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:01:56,667] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 19:01:56] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:01:57,122] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 19:01:57] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:02:09,751] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 19:02:09] "POST /apanhado HTTP/1.1" 200 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:02:38,776] INFO _log() L224  127.0.0.1 - - [09/Dec/2023 19:02:38] "GET /apanhados HTTP/1.1" 200 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:03:43,758] INFO _log() L224   * Detected change in '/home/filipiayres/Área de Trabalho/MVP-engenharia-de-software/api cardio/model/apanhado.py', reloading - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:03:43,947] INFO _log() L224   * Restarting with stat - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:04:25,305] INFO _log() L224   * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.15:5000 (Press CTRL+C to quit) - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:04:25,306] INFO _log() L224   * Restarting with stat - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:04:27,560] WARNING get_apanhados() L50   Não há apanhados cadastrados na base :/ - call_trace=/home/filipiayres/Área de Trabalho/MVP-engenharia-de-software/api cardio/app.py L50  
+[2023-12-09 19:04:27,562] INFO _log() L224  127.0.0.1 - - [09/Dec/2023 19:04:27] "[33mGET /apanhados HTTP/1.1[0m" 404 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:04:32,066] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 19:04:32] "POST /apanhado HTTP/1.1" 200 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:04:54,237] INFO _log() L224  127.0.0.1 - - [09/Dec/2023 19:04:54] "GET /apanhados HTTP/1.1" 200 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:06:20,972] INFO _log() L224   * Detected change in '/home/filipiayres/Área de Trabalho/MVP-engenharia-de-software/api cardio/model/apanhado.py', reloading - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:06:21,167] INFO _log() L224   * Restarting with stat - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:06:27,874] INFO _log() L224  127.0.0.1 - - [09/Dec/2023 19:06:27] "GET /apanhados HTTP/1.1" 200 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:06:45,384] INFO _log() L224   * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.15:5000 (Press CTRL+C to quit) - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:06:45,385] INFO _log() L224   * Restarting with stat - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:07:05,939] WARNING get_apanhados() L50   Não há apanhados cadastrados na base :/ - call_trace=/home/filipiayres/Área de Trabalho/MVP-engenharia-de-software/api cardio/app.py L50  
+[2023-12-09 19:07:05,940] INFO _log() L224  127.0.0.1 - - [09/Dec/2023 19:07:05] "[33mGET /apanhados HTTP/1.1[0m" 404 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
