@@ -1,0 +1,117 @@
+body,
+ul,
+li {
+    font-family: tahoma;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(190, 186, 155);
+}
+
+header {
+    background-color: rgb(187, 185, 172);
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.title {
+    color: rgb(247, 245, 245);
+    width: 100%;
+    background-color: rgb(121, 47, 18);
+    display: inline-block;
+    padding: 20px 0px;
+    position: sticky;
+    top: 0px;
+}
+
+.banner {
+    height: 30px;
+    overflow: hidden;
+}
+
+.banner img {
+    margin: 0px 0px 0px 0px;
+    width: 10%;
+}
+
+.newItem {
+    background-color: rgb(236, 233, 205);
+    padding: 10px 10px;
+    color: rgb(255, 255, 255);
+    display: inline-table;
+    justify-content: center;
+}
+
+.newItem:after {
+    content: "";
+    display: table-cell;
+    clear: both;
+    font-size: 1px;
+    border-radius: 1px;
+}
+
+
+.addBtn {
+    padding: 1px 10px;
+    background-color: rgb(22, 20, 14);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 1px;
+}
+
+.addBtn:hover {
+    background-color: #2ab53a;
+    color: white;
+}
+
+.items {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.close:hover {
+    color: #ec3e31;
+    font-weight: bolder;
+}
+
+.update:hover {
+    color: #000000;
+    font-weight: bolder;
+}
+
+table,
+th,
+td {
+    border: 1px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 10px;
+    font-size: 18px;
+    transition: 0.2s;
+    text-align: start;
+}
+
+table{
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+}
+
+tr:nth-child(odd){
+    background-color: #dbdbdb;
+}
+
+th:nth-child(1){
+    width: 80%;
+}
+
+tr:hover {
+    background: rgb(179, 178, 178);
+}
+

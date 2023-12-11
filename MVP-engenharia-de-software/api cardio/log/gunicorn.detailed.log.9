@@ -1,0 +1,51 @@
+[2023-12-09 18:49:19,085] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 18:49:19] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:49:19,099] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 18:49:19] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:49:19,104] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 18:49:19] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:49:19,586] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 18:49:19] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:49:29,695] ERROR log_exception() L1449 Exception on /apanhado [POST] - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/flask/app.py L1449
+Traceback (most recent call last):
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask_openapi3/scaffold.py", line 191, in wrapper
+    resp = _do_wrapper(
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask_openapi3/do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+  File "/home/filipiayres/Área de Trabalho/MVP-engenharia-de-software/api cardio/app.py", line 88, in predict
+    id=form.id,
+AttributeError: 'ApanhadoSchema' object has no attribute 'id'
+[2023-12-09 18:49:29,696] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 18:49:29] "[35m[1mPOST /apanhado HTTP/1.1[0m" 500 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:50:29,590] INFO _log() L224   * Detected change in '/home/filipiayres/Área de Trabalho/MVP-engenharia-de-software/api cardio/app.py', reloading - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:50:31,658] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 18:50:31] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:50:31,759] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 18:50:31] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:50:31,763] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 18:50:31] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:50:31,765] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 18:50:31] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:50:31,995] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 18:50:31] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:50:37,915] ERROR log_exception() L1449 Exception on /apanhado [POST] - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/flask/app.py L1449
+Traceback (most recent call last):
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask_openapi3/scaffold.py", line 191, in wrapper
+    resp = _do_wrapper(
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask_openapi3/do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+  File "/home/filipiayres/Área de Trabalho/MVP-engenharia-de-software/api cardio/app.py", line 87, in predict
+    apanhado = Apanhado(
+TypeError: __init__() missing 1 required positional argument: 'id'
+[2023-12-09 18:50:37,918] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 18:50:37] "[35m[1mPOST /apanhado HTTP/1.1[0m" 500 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 18:51:19,503] INFO _log() L224   * Detected change in '/home/filipiayres/Área de Trabalho/MVP-engenharia-de-software/api cardio/app.py', reloading - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 

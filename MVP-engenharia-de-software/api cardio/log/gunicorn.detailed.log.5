@@ -1,0 +1,26 @@
+[2023-12-09 19:07:15,161] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 19:07:15] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:07:15,213] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 19:07:15] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:07:15,215] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 19:07:15] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:07:15,243] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 19:07:15] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:07:15,506] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 19:07:15] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:07:24,062] ERROR log_exception() L1449 Exception on /apanhado [POST] - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/flask/app.py L1449
+Traceback (most recent call last):
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask_openapi3/scaffold.py", line 191, in wrapper
+    resp = _do_wrapper(
+  File "/home/filipiayres/.local/lib/python3.10/site-packages/flask_openapi3/do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+  File "/home/filipiayres/Área de Trabalho/MVP-engenharia-de-software/api cardio/app.py", line 87, in predict
+    apanhado = Apanhado(
+TypeError: __init__() got an unexpected keyword argument 'id'
+[2023-12-09 19:07:24,063] INFO _log() L224  10.0.2.15 - - [09/Dec/2023 19:07:24] "[35m[1mPOST /apanhado HTTP/1.1[0m" 500 - - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-12-09 19:08:10,327] INFO _log() L224   * Detected change in '/home/filipiayres/Área de Trabalho/MVP-engenharia-de-software/api cardio/schemas/apanhado_schema.py', reloading - call_trace=/home/filipiayres/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
