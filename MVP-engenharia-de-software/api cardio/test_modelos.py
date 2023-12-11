@@ -22,7 +22,7 @@ print(f"Número total de colunas: {len(dataset.columns)}")
 
 # Separando em dados de entrada e saída
 X = dataset.iloc[:, 1:7]
-Y = dataset.iloc[:, 1]
+Y = dataset.iloc[:, -1]
 
     
 # Método para testar o modelo de Regressão Logística a partir do arquivo correspondente
